@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Feast Hub | Recipe & Pantry Platform</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo">FH</div>
+      <div>
+        <h1>Feast Hub</h1>
+        <p>Recipe creation, sharing, rating, and pantry management</p>
+      </div>
+    </div>
+    <button id="backupBtn" class="secondary-btn">Run Backup</button>
+  </header>
+
+  <main class="layout">
+    <section class="card hero-card">
+      <div>
+        <p class="tag">Java Project + Web Demo</p>
+        <h2>Personalized recipe storage with a smart pantry system</h2>
+        <p>
+          Feast Hub helps users manage ingredients, create recipes, rate meals,
+          and keep support logs for troubleshooting and system maintenance.
+        </p>
+      </div>
+      <div class="stats">
+        <div><strong id="recipeCount">0</strong><span>Recipes</span></div>
+        <div><strong id="pantryCount">0</strong><span>Pantry Items</span></div>
+        <div><strong id="ticketCount">0</strong><span>Support Logs</span></div>
+      </div>
+    </section>
+
+    <section class="grid">
+      <article class="card">
+        <h3>Add Recipe</h3>
+        <form id="recipeForm">
+          <label>Recipe Name<input id="recipeName" required placeholder="Paneer Wrap" /></label>
+          <label>Ingredients<input id="recipeIngredients" required placeholder="paneer, tortilla, onion" /></label>
+          <label>Rating<input id="recipeRating" type="number" min="1" max="5" required placeholder="5" /></label>
+          <button type="submit">Save Recipe</button>
+        </form>
+      </article>
+
+      <article class="card">
+        <h3>Add Pantry Item</h3>
+        <form id="pantryForm">
+          <label>Ingredient<input id="pantryName" required placeholder="Rice" /></label>
+          <label>Quantity<input id="pantryQty" required placeholder="2 kg" /></label>
+          <label>Category<input id="pantryCategory" required placeholder="Grain" /></label>
+          <button type="submit">Add to Pantry</button>
+        </form>
+      </article>
+
+      <article class="card">
+        <h3>Technical Support Log</h3>
+        <form id="supportForm">
+          <label>Issue<input id="issue" required placeholder="User cannot access recipes" /></label>
+          <label>Solution<input id="solution" required placeholder="Reset user access and verified login" /></label>
+          <button type="submit">Add Log</button>
+        </form>
+      </article>
+    </section>
+
+    <section class="grid two-col">
+      <article class="card">
+        <h3>Recipes</h3>
+        <div id="recipesList" class="list"></div>
+      </article>
+      <article class="card">
+        <h3>Pantry</h3>
+        <div id="pantryList" class="list"></div>
+      </article>
+    </section>
+
+    <section class="card">
+      <h3>System Activity & Troubleshooting</h3>
+      <div id="supportList" class="list"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Feast Hub demo interface for GitHub portfolio presentation.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
